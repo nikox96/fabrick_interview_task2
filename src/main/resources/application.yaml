@@ -1,0 +1,27 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: fabrick_interview_task2
+  main:
+    web-application-type: servlet
+
+application:
+  cache:
+    caffeine:
+      info-ttl-hours: 2
+      info-max-size: 1000
+      bbox-ttl-minutes: 30
+      bbox-max-size: 500
+
+logging:
+  level:
+    com.example.fabrick_interview_task2: DEBUG
+    org.springframework.web.client: INFO
+    org.springframework.cache: INFO
+    com.github.benmanes.caffeine: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} | %-5level | %X{correlationId:-N/A} | %logger{1.} | %msg%n"
