@@ -10,6 +10,9 @@ spring:
     web-application-type: servlet
 
 application:
+  aviation-weather:
+    api:
+      base-url: https://aviationweather.gov/api/data
   cache:
     caffeine:
       info-ttl-hours: 2
